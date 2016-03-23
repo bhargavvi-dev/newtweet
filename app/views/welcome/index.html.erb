@@ -1,0 +1,18 @@
+<h1>Welcome#index</h1>
+
+ <% @instagram.each do |instagram| %>
+
+    <%= image_tag instagram.images.standard_resolution.url %>
+
+    <% end %>
+
+ <ul>
+  
+  <div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+</div>
+
+<%= link_to "Signout", destroy_user_session_path, method: :delete %>
